@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkWindow" id="jan_principal">
+    <property name="can-focus">False</property>
+    <property name="title" translatable="yes">Editor de Anotações</property>
+    <child>
+      <object class="GtkBox" id="box_principal">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">12</property>
+        <child>
+          <object class="GtkBox" id="box_titulo">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="spacing">6</property>
+            <child>
+              <object class="GtkLabel" id="lbl_titulo">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">_Titulo
+</property>
+                <property name="use-markup">True</property>
+                <property name="use-underline">True</property>
+                <property name="mnemonic-widget">entry_titulo</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="entry_titulo">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox" id="box_anotacao">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkLabel" id="lbl_anotacao">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">_Anotação</property>
+                <property name="use-underline">True</property>
+                <property name="mnemonic-widget">txt_anotacao</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkScrolledWindow" id="scr_anotacao">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="shadow-type">in</property>
+                <child>
+                  <object class="GtkTextView" id="txt_anotacao">
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="wrap-mode">word</property>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox" id="box_status">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="spacing">12</property>
+            <child>
+              <object class="GtkLabel" id="lbl_contador">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="halign">start</property>
+                <property name="label" translatable="yes">0 caracteres - 0 palavras</property>
+                <style>
+                  <class name="dim-label"/>
+                </style>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="lbl_status">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="halign">end</property>
+                <property name="label" translatable="yes">Alterações não salvas</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="pack-type">end</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox" id="box_botoes">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="halign">end</property>
+            <child>
+              <object class="GtkButton" id="btn_limpar">
+                <property name="label" translatable="yes">_Limpar</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="use-underline">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btn_salvar">
+                <property name="label" translatable="yes">_Salvar</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="use-underline">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
