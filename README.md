@@ -1,1 +1,1 @@
-# Atividade-2-Bruno
+Atividade feita por Maria Clara e Leonardo Hermann
